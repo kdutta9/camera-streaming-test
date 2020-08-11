@@ -15,8 +15,4 @@ class Camera:
         cv2.destroyAllWindows()
 
     def get_frame(self):
-        readFrame = self.vs.grab()
-
-        # Return bytes of frame.
-        buf = cv2.imencode('.jpg', readFrame)[1].tostring()
-        return buf
+        return self.vs.read()
