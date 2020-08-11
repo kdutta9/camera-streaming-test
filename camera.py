@@ -10,6 +10,9 @@ class Camera:
         print("Starting camera...")
         time.sleep(5)
 
+        if not self.vs.isOpened():
+            print("Cannot open webcam.")
+
     def __del__(self):
         # Clean up data.
         self.vs.release()
