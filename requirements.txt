@@ -1,0 +1,5 @@
+imutils==0.5.3
+Flask==1.1.2
+picamera==1.13
+numpy==1.18.5
+opencv-python==4.1.0.25
