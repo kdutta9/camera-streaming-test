@@ -18,6 +18,5 @@ class Camera:
     def get_frame(self):
         # Grab frame from video capture and return its bytes.
         frame = self.vs.read()
-        print(frame)
         buf = cv2.imencode('.jpg', frame)[1].tostring()
         return buf
