@@ -1,11 +1,9 @@
-from imutils.video.pivideostream import PiVideoStream
 import time
 import cv2
 
-
 class Camera:
     def __init__(self):
-        self.vs = PiVideoStream().start()
+        self.vs = cv2.VideoCapture()
         self.detections = 0
 
         # Let camera warm up for 5 seconds.
@@ -13,11 +11,11 @@ class Camera:
         time.sleep(5)
 
     def __del__(self):
-        self.vs.stop()
+        self.vs.release()
         cv2.destroyAllWindows()
 
     def get_frame(self):
-        readFrame = self.vs.read()
+        readFrame = self.vs.grab()
 
         # Return bytes of frame.
         buf = cv2.imencode('.jpg', readFrame)[1].tostring()
