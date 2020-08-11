@@ -15,5 +15,5 @@ class Camera:
         cv2.destroyAllWindows()
 
     def get_frame(self):
-        frame = self.vs.read()
-        return frame[0]
+        self.vs.grab()
+        return self.vs.retrieve()
