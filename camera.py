@@ -4,7 +4,7 @@ import cv2
 class Camera:
     def __init__(self):
         # Initialize camera.
-        self.vs = cv2.VideoCapture()
+        self.vs = cv2.VideoCapture(0)
 
         # Let camera warm up for 5 seconds.
         print("Starting camera...")
