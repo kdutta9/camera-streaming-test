@@ -21,5 +21,5 @@ Test a Raspberry Pi for live streaming capability.
 	python3 app.py
 	```
 ## Software Used
- - [OpenCV]([https://opencv.org/](https://opencv.org/)): Video processing
- - [Flask]([https://flask.palletsprojects.com/en/1.1.x/](https://flask.palletsprojects.com/en/1.1.x/)): Website generation
+ - [OpenCV](https://opencv.org/): Video processing
+ - [Flask](https://flask.palletsprojects.com/en/1.1.x/): Website generation
